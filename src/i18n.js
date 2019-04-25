@@ -16,12 +16,32 @@ function loadLocaleMessages () {
   return messages
 }
 
+const messages = loadLocaleMessages()
+
 const i18n = new VueI18n({
-  locale: process.env.VUE_APP_I18N_LOCALE || 'cn',
-  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'cn',
-  messages: loadLocaleMessages()
+  locale: process.env.VUE_APP_I18N_LOCALE || 'zh',
+  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'zh',
+  messages: messages
 })
 
-Vue.config.lang = process.env.VUE_APP_I18N_LOCALE || 'cn'
+const setup = lang => {
+
+  // add lang class for body element
+  Object.keys(messages).forEach(lang => {
+    document.body.classList.remove(`lang-${lang}`)
+  })
+  document.body.classList.add(`lang-${lang}`)
+  document.body.setAttribute('lang', lang)
+
+  Vue.config.lang = lang
+  i18n.locale = lang
+
+}
+
+export const switchLang = () => {
+  setup(i18n.locale === 'zh' ? 'en' : 'zh')
+}
+
+setup(process.env.VUE_APP_I18N_LOCALE || 'zh')
 
 export default i18n

@@ -1,30 +1,92 @@
 <template>
-  <div id="app">
-    <HelloI18N />
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <q-layout view="hHh Lpr lFf" class="shadow-2 rounded-borders">
+    <q-header elevated>
+      <q-toolbar>
+        <q-btn
+          flat
+          dense
+          round
+          @click="leftDrawerOpen = !leftDrawerOpen"
+          aria-label="Menu"
+          icon="fas fa-bars"
+        />
+
+        <q-toolbar-title>
+          Startup Check List
+        </q-toolbar-title>
+
+        <!-- <div>Quasar v{{ $q.version }}</div> -->
+        <q-btn
+          flat
+          dense
+          round
+          @click="changeLocale"
+          aria-label="Language"
+          icon="fas fa-language"
+        />
+      </q-toolbar>
+    </q-header>
+  <!-- bordered -->
+  <q-drawer
+        v-model="leftDrawerOpen"    
+        :breakpoint="500"
+        show-if-above>
+        <q-scroll-area class="fit">
+          <q-list padding class="menu-list">
+            <q-item active clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="fas fa-asterisk" />
+              </q-item-section>
+
+              <q-item-section>
+                {{$t('nav.reference')}}
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable tag="a" target="_blank" href="https://github.com/le0zh0u/startup-checklist">
+              <q-item-section avatar>
+                <q-icon name="fas fa-code" />
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>{{$t('nav.github')}}</q-item-label>
+                <q-item-label caption>https://github.com/le0zh0u/startup-checklist</q-item-label>
+              </q-item-section>
+            </q-item>
+
+          </q-list>
+        </q-scroll-area>
+      </q-drawer>
+    <q-page-container>
+      <HelloWorld class="bg-grey-2"/>
+    </q-page-container>
+  </q-layout>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import HelloI18N from './components/HelloI18n.vue'
+import { switchLang }  from '@/i18n'
 
 export default {
-  name: 'app',
+  name: 'LayoutDefault',
+
   components: {
-    HelloWorld, HelloI18N
+    HelloWorld
+  },
+
+  data () {
+    return {
+      leftDrawerOpen: this.$q.platform.is.desktop
+    }
+  },
+  methods: {
+    changeLocale() {
+      switchLang()
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus" scoped>
+.menu-list .q-item
+  border-radius 0 32px 32px 0
 </style>

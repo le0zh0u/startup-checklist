@@ -1,3 +1,108 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "page-title": "Startup Check List",
+  "phase1": "",
+  "phase2": "I use this list both to develop ideas and filter them. If you adopt it, be careful about using it as a filter. ",
+  "phase3": "Remember that ",
+  "phase3-bold": "in the early stages, good ideas are very easy to kill.",
+  "check-list": [
+    {
+      "title": "Product",
+      "questionList": [
+        {
+          "title": "What are you building? "
+        },
+        {
+          "title": "Who is it for? "
+        },
+        {
+          "title": "What is the essence of their dissatisfaction? If they read this answer, would they say “thanks, I wish I’d thought of putting it that way”? "
+        },
+        {
+          "title": "Write a tweet from a hypothetical customer explaining the product and how it eliminates their dissatisfaction. "
+        },
+        {
+          "title": "Write a blog post title for your product launch. Is it surprising? Is it new? Will your target customers want to click on it? Will they want to share the link? Will they still share it the next day? "
+        },
+        {
+          "title": "Write the first paragraph of your product announcement blog post. Include the product name, an explanation of what the product is, the target market, the main benefit, and the call to action. "
+        },
+        {
+          "title": "What “metrics of goodness” do your target customers care about? Does your product dominate every available alternative on these metrics? "
+        }
+      ]
+    },
+    {
+      "title": "Growth",
+      "questionList": [
+        {
+          "title": "Fill in the bottom-up market size equation: NUM_USERS * ACV = MARKET_SIZE. Are your numbers credible? Find a good reference class if you’re building something completely new. "
+        },
+        {
+          "title": "Which subset of your target customers are so constrained by the status quo, they’ll welcome a buggy product? "
+        },
+        {
+          "title": "List your first ten customers. "
+        },
+        {
+          "title": "Which playbook will you use to get customers after the first ten? "
+        },
+        {
+          "title": "What would need to be true in 18 months for you to get essentially unlimited cheap capital? How will you achieve that? "
+        }
+      ]
+    },
+    {
+      "title": "Strategy",
+      "questionList": [
+        {
+          "title": "Why now? What’s true about the world that nobody else figured out yet? "
+        },
+        {
+          "title": "What is the most ambitious achievable milestone for your company within a 25 year time horizon? "
+        },
+        {
+          "title": "Is your product a credible advance toward this milestone? "
+        },
+        {
+          "title": "What’s the next credible advance toward this milestone? The one after that? The one after that? "
+        },
+        {
+          "title": "How will you build a moat? "
+        }
+      ]
+    },
+    {
+      "title": "Meaning",
+      "questionList": [
+        {
+          "title": "What would reaching your 25 year milestone mean for the world? Is this future really exciting? How many years of your life would you give up to teleport there? If you found yourself in this counterfactual world, would you want to go back? "
+        },
+        {
+          "title": "If another company was working on this idea and not you, what would you think about it? Would you join them? "
+        },
+        {
+          "title": "Imagine yourself standing in front of your team, investors, family, and friends. You’ve failed, and they’re waiting for you to speak. What will you say? Are you willing to work on this problem given that failure is the default? "
+        }
+      ]
+    },
+    {
+      "title": "Bonus",
+      "questionList": [
+        {
+          "title": "What’s your company’s stock ticker symbol? "
+        },
+        {
+          "title": "Is it likely to be the most important company started this year? "
+        }
+      ]
+    }
+  ],
+  "no-length-limit": "No Limit",
+  "max-limit": "Max {maxLimit} characters",
+  "max-error-message": "Please use maximum {maxLimit} characters",
+  "nav": {
+    "reference": "Reference",
+    "github": "Github"
+  }
 }
