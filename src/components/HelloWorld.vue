@@ -35,11 +35,11 @@
         </div>
       </div>
     </div>
-
-    <!-- place QPageScroller at end of page -->
-  <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
-    <q-btn fab icon="fas fa-angle-up" color="primary" />
-  </q-page-scroller>
+      
+      <!-- place QPageScroller at end of page -->
+    <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
+      <q-btn fab icon="fas fa-angle-up" color="primary" />
+    </q-page-scroller>
   </q-page>
 </template>
 

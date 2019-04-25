@@ -23,6 +23,7 @@
           @click="changeLocale"
           aria-label="Language"
           icon="fas fa-language"
+          class="language"
         />
       </q-toolbar>
     </q-header>
@@ -33,13 +34,14 @@
         show-if-above>
         <q-scroll-area class="fit">
           <q-list padding class="menu-list">
-            <q-item active clickable v-ripple>
+            <q-item clickable tag="a" target="_blank" href="https://www.defmacro.org/2019/03/26/startup-checklist.html">
               <q-item-section avatar>
-                <q-icon name="fas fa-asterisk" />
+                <q-icon name="far fa-newspaper" />
               </q-item-section>
 
               <q-item-section>
-                {{$t('nav.reference')}}
+                <q-item-label>{{$t('nav.reference')}}</q-item-label>
+                <q-item-label caption>{{$t('thanks')}} Slava Akhmechet</q-item-label>
               </q-item-section>
             </q-item>
 
@@ -89,4 +91,7 @@ export default {
 <style lang="stylus" scoped>
 .menu-list .q-item
   border-radius 0 32px 32px 0
+
+.language
+  margin-right: 1rem
 </style>
