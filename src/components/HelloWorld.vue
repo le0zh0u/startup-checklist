@@ -30,7 +30,7 @@
         />
         
         <div class="note note-gray" v-if="question.tips.length > 0">
-          <p class="note-title">TIPS</p>
+          <p class="note-title">TIP</p>
           <p v-for="(tip, tipKey) in question.tips" :key="tipsKey(question.index, tipKey)" v-html="tip"/>
         </div>
       </div>
