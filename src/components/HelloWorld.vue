@@ -28,10 +28,17 @@
           :error-message="validateErrorMessageForamt(question.max)"
           :error="question.max != 0 && question.data.length > question.max"
         />
-        
-        <div class="note note-gray" v-if="question.tips.length > 0">
-          <p class="note-title">TIP</p>
-          <p v-for="(tip, tipKey) in question.tips" :key="tipsKey(question.index, tipKey)" v-html="tip"/>
+        <div class="note note-gray" v-if="question.tips.length > 0 || (question.alsoSee && question.alsoSee.length > 0)">
+          <p class="note-title">TIPS</p>
+          <div v-if="question.tips.length > 0">
+            <p v-for="(tip, tipKey) in question.tips" :key="tipsKey(question.index, tipKey)" v-html="tip"/>
+          </div>
+           <div v-else-if="question.alsoSee.length > 0">
+            <p>
+              {{$t('see-also')}}<span v-for="(tip) in question.alsoSee" :key="tip.title"><a v-html="tip.title" :href="tip.url" target="_blank"/>&nbsp;&nbsp;&nbsp;</span>
+            </p>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -101,7 +108,14 @@ export default {
               title: '你的目标客户关心“好的衡量标准”是什么？你的产品是否主导了这些衡量标准的每个可用替代方案？',
               max: 240,
               data: '',
-              tips:['可以看看： <a style="color: #027be3;"href="https://www.jwz.org/doc/worse-is-better.html" target="_blank">The Rise of Worse is Better</a>, <a style="color: #027be3;"href="https://www.artima.com/weblogs/viewpost.jsp?thread=24807" target="_blank">Worse is worse</a>']
+              tips:[],
+              alsoSee: [{
+                url: 'https://www.jwz.org/doc/worse-is-better.html',
+                title: 'The Rise of Worse is Better'
+              },{
+                url: 'https://www.artima.com/weblogs/viewpost.jsp?thread=24807',
+                title: 'Worse is worse'
+              }]
             }
           ]
         },
@@ -114,7 +128,11 @@ export default {
               title: '填写自下而上的市场规模等式：`NUM_USERS * ACV = MARKET_SIZE`。你的数量是可观的吗？如果你正在构建一些全新的东西，请找一个好的参考对象。',
               max: 0,
               data: '',
-              tips:['可以看： <a style="color: #027be3;"href="https://wiki.lesswrong.com/wiki/Shut_up_and_multiply" target="_blank">Shut up and multiply</a>']
+              tips:[],
+              alsoSee: [{
+                url: 'https://wiki.lesswrong.com/wiki/Shut_up_and_multiply',
+                title: 'Shut up and multiply'
+              }]
             },
             {
               index: 9,
@@ -135,7 +153,11 @@ export default {
               title: '在获得头10名用户后，你将使用哪种攻略来吸引客户？',
               max: 240,
               data: '',
-              tips: ['可以看： <a style="color: #027be3;"href="http://christophjanz.blogspot.com/2014/10/five-ways-to-build-100-million-business.html" target="_blank">Five ways to build a $100 million business</a>']
+              tips: [],
+              alsoSee: [{
+                url: 'http://christophjanz.blogspot.com/2014/10/five-ways-to-build-100-million-business.html',
+                title: 'Five ways to build a $100 million business'
+              }]
             },
             {
               index: 12,
@@ -177,14 +199,25 @@ export default {
               title: '这个里程碑的下一个可靠进展是什么？它的下一个？再下个？',
               max: 240,
               data: '',
-              tips: ['可以看看：<a style="color: #027be3;"href="https://twitter.com/spakhm/status/1111411471869595648" target="_blank">Tesla master plan</a>，<a style="color: #027be3;"href="https://twitter.com/stevesi/status/1111092932252041216" target="_blank">iPhone runs OSX</a>']
+              tips: [],
+              alsoSee: [{
+                url: 'https://twitter.com/spakhm/status/1111411471869595648',
+                title: 'Tesla master plan'
+              },{
+                url: 'https://twitter.com/stevesi/status/1111092932252041216',
+                title: 'iPhone runs OSX'
+              }]
             },
             {
               index: 17,
               title: ' 你将如何构建一个护城河？',
               max: 240,
               data: '',
-              tips: ['可以看看：<a style="color: #027be3;"href="https://hbr.org/1979/03/how-competitive-forces-shape-strategy" target="_blank">How Competitive Forces Shape Strategy</a>']
+              tips: [],
+              alsoSee: [{
+                url: 'https://hbr.org/1979/03/how-competitive-forces-shape-strategy',
+                title: 'How Competitive Forces Shape Strategy'
+              }]
             }
           ]
         },
@@ -212,7 +245,11 @@ export default {
               title: '想象你自己正站在你的团队，投资人，家人和朋友面前，你已经失败了，并且他们正在等你说话。你将会说什么？如果失败是默认的，你还愿意为这个问题而努力吗？',
               max: 480,
               data: '',
-              tips:['可以看看：<a style="color: #027be3;"href="https://twitter.com/statsepi/status/1021334815822548992" target="_blank">Your intervention won\'t work</a>']
+              tips:[],
+              alsoSee: [{
+                url: 'https://twitter.com/statsepi/status/1021334815822548992',
+                title: 'Your intervention won\'t work'
+              }]
             }
           ]
         },
@@ -301,13 +338,15 @@ h2
 
 .note > p
   margin-bottom: 0; 
+  color: rgba(0,0,0,0.54);
 
 .note a
     color: #15792d;
 
-.note > .note-title
+.note > p.note-title
   font-weight: 500;
   margin-bottom: 6px; 
+  color: #000000;
 
 .question-pannel 
   margin-bottom: 1rem
