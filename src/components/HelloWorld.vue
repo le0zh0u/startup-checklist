@@ -3,6 +3,16 @@
     <h1>
       {{$t('page-title')}}
     </h1>
+
+    <q-card class="desc-card">
+      <q-card-section>
+        {{ $t('desc1')}}<br/>
+        {{ $t('desc2')}}<br/>
+        {{ $t('desc3')}}<br/>
+        {{ $t('desc4')}}<br/>
+      </q-card-section>
+    </q-card>
+    
     <p>
       {{$t('phase1')}}<br/>
       {{$t('phase2')}}<br/>
@@ -42,6 +52,19 @@
         </div>
       </div>
     </div>
+
+    <q-card dark bordered class="bg-grey-9 privacy-card">
+      <q-card-section>
+        <div class="text-h6">{{$t('private-policy-title')}}</div>
+        <!-- <div class="text-subtitle2">by John Doe</div> -->
+      </q-card-section>
+
+      <q-separator dark inset />
+
+      <q-card-section>
+        {{$t('private-policy')}}
+      </q-card-section>
+    </q-card>
       
       <!-- place QPageScroller at end of page -->
     <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
@@ -302,7 +325,7 @@ h1
   line-height: 2rem;
   padding: 1rem 0;
   font-weight: 500;
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
 
 h2 
   font-size: 1.5rem;
@@ -311,6 +334,15 @@ h2
   font-weight: 500;
   border-bottom: 1px solid #ccc;
   margin: 3rem 0 1.5rem;
+
+a
+    color: #15792d;
+
+.desc-card 
+  margin-bottom: 3rem;
+
+.privacy-card
+  margin-top: 4rem;
 
 .note 
   margin-bottom: 22px;
@@ -339,9 +371,6 @@ h2
 .note > p
   margin-bottom: 0; 
   color: rgba(0,0,0,0.54);
-
-.note a
-    color: #15792d;
 
 .note > p.note-title
   font-weight: 500;

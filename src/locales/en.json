@@ -106,5 +106,11 @@
     "github": "Github"
   },
   "thanks": "Thanks to",
-  "see-also": "See also: "
+  "see-also": "See also: ",
+  "desc1": "The content of this page is from Slava Akhmechet's defmacro. Although the entrepreneurial tide has fallen back, it is still a source of success.",
+  "desc2": "If you are having a startup, you can check your startup with the following list.",
+  "desc3": "If you haven't started your startup yet, you can familiarize youreself with the next issue for future startup use.",
+  "desc4": "If you have already succeeded, you can tell me about the following questions,share your thoughts and other detail needed to be checked.",
+  "private-policy-title": "Private Policy",
+  "private-policy": "This page just use Google Analytics. Otherwise, I will not collect any information from you."
 }

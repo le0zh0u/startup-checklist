@@ -24,6 +24,9 @@ import {
   QInput,
   QRadio,
   QScrollArea,
+  QSeparator,
+  QCard,
+  QCardSection,
 } from 'quasar'
 
 Vue.use(Quasar, {
@@ -46,6 +49,9 @@ Vue.use(Quasar, {
     QInput,
     QRadio,
     QScrollArea,
+    QSeparator,
+    QCard,
+    QCardSection,
   },
   directives: {
   },
