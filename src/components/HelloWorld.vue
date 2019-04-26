@@ -53,6 +53,13 @@
       </div>
     </div>
 
+    <div class="content-bottom">
+      <!-- <p>如果你已经完成了回答，可以添加 -->
+      <q-btn @click="createFile" color="primary">{{$t('download-btn')}}</q-btn>
+    </div>
+
+    <q-separator />
+
     <q-card dark bordered class="bg-grey-9 privacy-card">
       <q-card-section>
         <div class="text-h6">{{$t('private-policy-title')}}</div>
@@ -74,6 +81,8 @@
 </template>
 
 <script>
+import { saveAs } from 'file-saver';
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -308,6 +317,36 @@ export default {
     },
     validateErrorMessageForamt(max){
       return max == 0 ? "" : this.$t('max-error-message', {maxLimit: '' + max})
+    },
+    createFile: function () {
+      var hasEmptyField = false
+      this.checkList.forEach(data => {
+        var filtered = data.questionList.filter(function (question) {
+          return !question.data || question.data === '' || question.data.length == 0;
+        })
+        if(filtered.length > 0){
+          hasEmptyField = true
+          return ;
+        } 
+      })
+
+      if(hasEmptyField){
+        this.$q.notify({
+          message: this.$t('has-empty-field'),
+          color: 'red'
+        })
+        return;
+      }
+    
+      var content = ''
+      this.checkList.forEach(data => {
+        content = content.concat('## ', data.title, '\n')
+        data.questionList.forEach(question => {
+          content = content.concat('Q:',question.title, '\n', 'A:', question.data, '\n\n')
+        })
+      })
+      var blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+      saveAs(blob, "StartupCheckList.md");
     }
   }
 }
@@ -342,7 +381,7 @@ a
   margin-bottom: 3rem;
 
 .privacy-card
-  margin-top: 4rem;
+  margin-top: 2rem;
 
 .note 
   margin-bottom: 22px;
@@ -378,7 +417,10 @@ a
   color: #000000;
 
 .question-pannel 
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
+
+.content-bottom
+  margin-bottom: 1rem;
 
 .bold 
   font-weight: bold

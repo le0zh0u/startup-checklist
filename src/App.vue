@@ -55,6 +55,29 @@
               </q-item-section>
             </q-item>
 
+            <q-separator />
+
+            <q-item clickable tag="a" target="_blank" href="http://www.leozhou.me/">
+              <q-item-section avatar>
+                <q-icon name="fas fa-blog" />
+              </q-item-section>
+
+              <q-item-section>
+                <q-item-label>{{$t('nav.blog')}}</q-item-label>
+                <q-item-label caption>http://www.leozhou.me/</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable tag="a" target="_blank" href="http://contentbox.leozhou.me/">
+              <q-item-section avatar>
+                <q-icon name="img:http://img.leozhou.me/picGo/icon-white.png" />
+              </q-item-section>
+
+              <q-item-section>
+                <q-item-label>{{$t('nav.common-content-box')}}</q-item-label>
+              </q-item-section>
+            </q-item>
+
           </q-list>
         </q-scroll-area>
       </q-drawer>

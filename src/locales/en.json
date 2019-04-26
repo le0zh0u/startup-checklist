@@ -103,7 +103,9 @@
   "max-error-message": "Please use maximum {maxLimit} characters",
   "nav": {
     "reference": "Reference",
-    "github": "Github"
+    "github": "Github",
+    "common-content-box": "CC-Common Content Box",
+    "blog": "Leozhou.me"
   },
   "thanks": "Thanks to",
   "see-also": "See also: ",
@@ -112,5 +114,7 @@
   "desc3": "If you haven't started your startup yet, you can familiarize youreself with the next issue for future startup use.",
   "desc4": "If you have already succeeded, you can tell me about the following questions,share your thoughts and other detail needed to be checked.",
   "private-policy-title": "Private Policy",
-  "private-policy": "This page just use Google Analytics. Otherwise, I will not collect any information from you."
+  "private-policy": "This page just use Google Analytics. Otherwise, I will not collect any information from you.",
+  "has-empty-field": "Have unanswered questions.",
+  "download-btn": "Download Data"
 }

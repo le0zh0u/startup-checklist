@@ -3,8 +3,8 @@
   "page-title": "Startup Check List",
   "phase1": "对于一个创业想法，如何在执行之前验证下是否可行呢？",
   "phase2": "可以使用这个列表来思考和过滤想法。如果你采用了它，在用作过滤时请谨慎思考。",
-  "phase3":"记住：",
-  "phase3-bold":"好的想法在早期很容易被熄灭。",
+  "phase3": "记住：",
+  "phase3-bold": "好的想法在早期很容易被熄灭。",
   "check-list": [
     {
       "title": "产品",
@@ -103,15 +103,18 @@
   "max-error-message": "请输入不大于{maxLimit}个字",
   "nav": {
     "reference": "想法来源",
-    "github": "Github"
+    "github": "Github",
+    "common-content-box": "CC-常用内容盒子",
+    "blog": "Leozhou.me"
   },
   "thanks": "感谢",
   "see-also": "可以看看：",
-  "desc1":"本页面的内容来源于Slava Akhmechet的defmacro，虽然创业潮已经回落，但仍源源不断后来者。",
+  "desc1": "本页面的内容来源于Slava Akhmechet的defmacro，虽然创业潮已经回落，但仍源源不断后来者。",
   "desc2": "如果你正在创业，那么可以用下面的问题检验你的想法；",
   "desc3": "如果你还没开始创业，可以熟悉下问题以备以后创业使用；",
   "desc4": "如果你已经创业成功了，可以告诉我对这些问题的看法，分享你的看法以及你觉得创业想法需要Check的地方。",
   "private-policy-title": "隐私政策",
-  "private-policy": "本页面处理使用Google Analytics进行收集浏览数据。除此之外暂时不会收集你的任何信息。"
-  
+  "private-policy": "本页面处理使用Google Analytics进行收集浏览数据。除此之外暂时不会收集你的任何信息。",
+  "has-empty-field": "有未回答的问题。",
+  "download-btn": "下载数据"
 }

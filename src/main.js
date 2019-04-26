@@ -27,10 +27,13 @@ import {
   QSeparator,
   QCard,
   QCardSection,
+  Notify,
 } from 'quasar'
 
 Vue.use(Quasar, {
-  config: {},
+  config: {
+    notify: { /* Notify defaults */ }
+  },
   components: {
     QLayout,
     QHeader,
@@ -56,6 +59,7 @@ Vue.use(Quasar, {
   directives: {
   },
   plugins: {
+    Notify,
   },
   iconSet: iconSet
  })
