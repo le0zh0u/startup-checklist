@@ -78,6 +78,17 @@
               </q-item-section>
             </q-item>
 
+            <q-item clickable tag="a" href="mailto:hi@leozhou.me">
+              <q-item-section avatar>
+                <q-icon name="far fa-envelope" />
+              </q-item-section>
+
+              <q-item-section>
+                <q-item-label>{{$t('nav.email')}}</q-item-label>
+                <q-item-label caption>hi#leozhou.me</q-item-label>
+              </q-item-section>
+            </q-item>
+
           </q-list>
         </q-scroll-area>
       </q-drawer>

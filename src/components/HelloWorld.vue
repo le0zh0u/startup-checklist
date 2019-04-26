@@ -338,7 +338,7 @@ export default {
         return;
       }
     
-      var content = '[Startup CheckList](http://startup.leozhou.me/?ref=file)'
+      var content = '[Startup CheckList](http://startup.leozhou.me/?ref=file)\n\n'
       this.checkList.forEach(data => {
         content = content.concat('## ', data.title, '\n')
         data.questionList.forEach(question => {

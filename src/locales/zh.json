@@ -103,9 +103,11 @@
   "max-error-message": "请输入不大于{maxLimit}个字",
   "nav": {
     "reference": "想法来源",
-    "github": "Github",
+    "github": "Code",
     "common-content-box": "CC-常用内容盒子",
-    "blog": "Leozhou.me"
+    "blog": "Leozhou.me",
+    "email": "电子邮件",
+    "contact": ""
   },
   "thanks": "感谢",
   "see-also": "可以看看：",
