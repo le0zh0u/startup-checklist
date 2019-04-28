@@ -96,7 +96,7 @@ export default {
             {
               index: 1,
               title: '您构建的是什么？',
-              max: 7,
+              max: 70,
               data: '',
               tips:[]
             },
