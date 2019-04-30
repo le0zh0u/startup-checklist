@@ -116,28 +116,28 @@ export default {
             },
             {
               index: 4,
-              title: '写一个假设客户的推文，解释产品及其如何消除他们的不满。',
+              title: '以假想的目标客户的身份写一条推文，解释产品及它如何消除他们的不满。',
               max: 0,
               data: '',
               tips: ['<a style="color: #027be3;"href="https://twitter.com/BrianNorgard/status/1110915013085028353" target="_blank">@benedictevans</a>: No one cares about your product. Who built it, its features, the origin story — it’s all superfluous. People only find value in what your product can do for them right now. Save people time. Save people money. Give people an escape. The selfish hand will always govern. ', '<a style="color: #027be3;"href="https://www.amazon.com/Effective-Executive-Definitive-Harperbusiness-Essentials/dp/0060833459/" target="_blank">Peter Drucker</a>: Are you really doing the best you can to help the customer?']
             },
             {
               index: 5,
-              title: '为你的产品的启动写一个博客文章标题。是不是令人吃惊的？是不是新的？你的目标客户想要点击它吗？他们想要分享这个链接吗？明天他们仍然想要分享它吗？',
+              title: '如果为你的产品的启动写一个博客文章标题。它是不是令人惊喜的？它是不是新颖的？你的目标客户想要点击它吗？他们想要分享这个链接吗？明天他们仍然想要分享它吗？',
               max: 70,
               data: '',
               tips: []
             },
             {
               index: 6,
-              title: '写下产品公告博客文章的第一段。包含产品名称，一段这是什么产品的说明，目标市场，主要的好处和进行呼吁使用',
+              title: '写下产品的博客文章的第一段。它需要包含产品名称，这是什么产品的说明，目标市场，主要的好处，以及呼吁大家进行使用的文稿。',
               max: 240,
               data: '',
               tips: []
             },
             {
               index: 7,
-              title: '你的目标客户关心“好的衡量标准”是什么？你的产品是否主导了这些衡量标准的每个可用替代方案？',
+              title: '你的目标客户关心的“衡量这款产品好坏的核心标准”是什么？你的产品是否在每个衡量标准上对其他的可用替代方案是占据优势的？',
               max: 240,
               data: '',
               tips:[],
@@ -157,7 +157,7 @@ export default {
           questionList: [
             {
               index: 8,
-              title: '填写自下而上的市场规模等式：`NUM_USERS * ACV = MARKET_SIZE`。你的数量是可观的吗？如果你正在构建一些全新的东西，请找一个好的参考对象。',
+              title: '填写自下而上的市场规模等式：`NUM_USERS * ACV = MARKET_SIZE`。你产品的市场规模数量是可观的吗？如果你正在构建一些全新的东西，请找一个正确的参考对象。',
               max: 0,
               data: '',
               tips:[],
@@ -168,21 +168,21 @@ export default {
             },
             {
               index: 9,
-              title: '你的目标客户的哪个子集受到了现状的限制，他们会欢迎有缺陷的产品吗？',
+              title: '你哪些部分的目标客户受到了现状的限制，他们会欢迎有点缺陷的产品吗？',
               max: 140,
               data: '',
               tips:[]
             },
             {
               index: 10,
-              title: '列出你的头10个用户',
+              title: '列出你的头10个目标用户',
               max: 240,
               data: '',
               tips:[]
             },
             {
               index: 11,
-              title: '在获得头10名用户后，你将使用哪种攻略来吸引客户？',
+              title: '在获得头10名用户后，你将如何来吸引之后的客户？',
               max: 240,
               data: '',
               tips: [],
@@ -193,7 +193,7 @@ export default {
             },
             {
               index: 12,
-              title: '为了你能获得基本无限的廉价资本，需要实现哪些？你将如何实现它？',
+              title: '为了在18个月内能获得基本无限的资本，你需要完成哪些？你将如何完成它？',
               max: 240,
               data: '',
               tips: []
@@ -206,21 +206,21 @@ export default {
           questionList: [
             {
               index: 13,
-              title: '为什么是现在？ 至今导致其他人没有想到的原因是什么？',
+              title: '为什么是现在？ 至今导致其他人没有想到的/想通的原因是什么？',
               max: 240,
               data: '',
               tips:[]
             },
             {
               index: 14,
-              title: ' 在25年的时间范围内，你的公司最有志向且可实现的里程碑是什么？',
+              title: '在25年的时间范围内，你的公司最有志向且可实现的里程碑是什么？',
               max: 70,
               data: '',
               tips:[]
             },
             {
               index: 15,
-              title: '你的产品是否可以可靠地前进到这个里程碑？',
+              title: '你的产品是否可以可靠地发展到这个里程碑？',
               max: 0,
               data: '',
               tips:[],
@@ -228,7 +228,7 @@ export default {
             },
             {
               index: 16,
-              title: '这个里程碑的下一个可靠进展是什么？它的下一个？再下个？',
+              title: '以这个里程碑为目标，你下一步可行的发展是什么？它的下一个是什么？再下个是什么？',
               max: 240,
               data: '',
               tips: [],
@@ -242,7 +242,7 @@ export default {
             },
             {
               index: 17,
-              title: ' 你将如何构建一个护城河？',
+              title: '你将如何构建一个护城河（构建你的壁垒）？',
               max: 240,
               data: '',
               tips: [],
@@ -259,7 +259,7 @@ export default {
           questionList: [
             {
               index: 18,
-              title: '达到你的25年里程碑对世界意味着什么？这个未来真的令人兴奋吗？为了达到它你会放弃多少年的生命？如果你发现自己处于与这相反的世界，你想回去吗？',
+              title: '达到你的25年里程碑对世界意味着什么？这个未来真的令人兴奋吗？你愿意花多少年的生命为了达到它？',
               max: 140,
               data: '',
               tips:[]
@@ -274,7 +274,7 @@ export default {
             },
             {
               index: 20,
-              title: '想象你自己正站在你的团队，投资人，家人和朋友面前，你已经失败了，并且他们正在等你说话。你将会说什么？如果失败是默认的，你还愿意为这个问题而努力吗？',
+              title: '想象一下，如果你失败了，正站在你的团队，投资人，家人和朋友面前，并且他们正在等你说话。你会说什么？如果失败是必然的，你还愿意为解决这个问题而努力吗？',
               max: 480,
               data: '',
               tips:[],
